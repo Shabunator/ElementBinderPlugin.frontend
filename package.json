@@ -1,7 +1,7 @@
 {
   "name": "element-binder-plugin",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,15 +10,19 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/node": "^20.12.7",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.3"
   },
   "devDependencies": {
+    "@gravity-ui/uikit": "^6.10.2",
     "@types/react": "^18.2.75",
     "@types/react-dom": "^18.2.24",
     "@typescript-eslint/eslint-plugin": "^7.6.0",
     "@typescript-eslint/parser": "^7.6.0",
     "@vitejs/plugin-react-swc": "^3.6.0",
+    "clsx": "^2.1.0",
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
