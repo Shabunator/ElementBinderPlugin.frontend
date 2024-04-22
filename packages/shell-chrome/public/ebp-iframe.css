@@ -1,0 +1,23 @@
+.ebp-iframe {
+    box-sizing: border-box;
+    left: unset;
+    min-height: 100vh;
+    min-width: 300px;
+    position: fixed;
+    right: calc(300px * -1);
+    top: 0;
+    z-index: 2147483647;
+    clip: unset !important;
+    height: 100vh !important;
+    width: 300px !important;
+    transition: all 150ms ease-in;;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+}
+
+.ebp-iframe--open {
+    right: 0px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 4px;
+}
