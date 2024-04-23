@@ -1,12 +1,11 @@
 body {
-    font-family: 'Open Sans', sans-serif;
-    line-height: 1.5;
-    font-weight: 400;
-    margin: 0;
-
     min-height: 100vh;
     scroll-behavior: smooth;
     text-rendering: optimizeSpeed;
+}
+
+#root {
+    border: 1px solid var(--g-color-line-generic-solid);
 }
 
 body,

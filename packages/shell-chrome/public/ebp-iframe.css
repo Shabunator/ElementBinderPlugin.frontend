@@ -7,10 +7,10 @@
     right: calc(300px * -1);
     top: 0;
     z-index: 2147483647;
-    clip: unset !important;
-    height: 100vh !important;
-    width: 300px !important;
-    transition: all 150ms ease-in;;
+    clip: unset;
+    height: 100vh;
+    width: 300px;
+    transition: all 150ms ease-in;
     border-width: initial;
     border-style: none;
     border-color: initial;
@@ -18,6 +18,6 @@
 }
 
 .ebp-iframe--open {
-    right: 0px;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 4px;
+    right: 0;
+    box-shadow: rgba(0, 0, 0, 0.15) 0 2px 4px;
 }

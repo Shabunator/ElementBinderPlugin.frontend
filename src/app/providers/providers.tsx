@@ -1,9 +1,8 @@
-import { FC } from 'react';
+import { FC, ReactElement } from 'react';
 import { ThemeProvider } from '@gravity-ui/uikit';
 
 interface IProviders {
-    /** Content that will be wrapped by providers. */
-    readonly children: JSX.Element
+    readonly children: ReactElement
 }
 
 export const Providers: FC<IProviders> = ({ children }) => {

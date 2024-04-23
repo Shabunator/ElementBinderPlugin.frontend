@@ -1,0 +1,9 @@
+.homePage {
+    display: grid;
+    gap: var(--g-spacing-2);
+}
+
+.homePage__priceBlock {
+    display: flex;
+    gap: var(--g-spacing-2);
+}
