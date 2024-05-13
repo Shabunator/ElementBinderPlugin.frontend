@@ -1,4 +1,4 @@
-import { TextInput } from '@gravity-ui/uikit';
+import { TextInput, Button } from '@gravity-ui/uikit';
 
 import './homePage.css';
 
@@ -13,6 +13,7 @@ export const HomePage = () => {
                 <TextInput size="l" placeholder="Цена" />
                 <TextInput size="l" placeholder="Единицы измерения" />
             </div>
+            <Button view="action" size="l">Сохранить</Button>
         </div>
     );
 };

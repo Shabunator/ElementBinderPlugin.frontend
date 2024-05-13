@@ -11,6 +11,11 @@
     padding: var(--g-spacing-2);
 }
 
+.layout__buttonRow {
+    display: flex;
+    gap: var(--g-spacing-2);
+}
+
 .layout__main {
     padding: 0 var(--g-spacing-2);
 }

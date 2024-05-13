@@ -1,24 +1,17 @@
-import { TabStorageSession } from "./types/tab-storage-session";
+import { TabStorageSession } from './types/tab-storage-session';
+import { messageListener } from './helpers/message-listener';
+import { createIframe, toggleIframe, isIframeExists } from './helpers/iframe-helper'
+import { getDataAutocomplete } from './helpers/site-helper'
 
-const ifrm = document.createElement("iframe");
-ifrm.setAttribute("src", "http://localhost:5173/");
-ifrm.setAttribute("id", "element-binder-plugin-iframe");
-ifrm.classList.add("ebp-iframe");
+window.addEventListener('message', messageListener);
 
 window.addEventListener('click-extension-button', (event) => {
-    if (document.getElementById('element-binder-plugin-iframe') === null) {
-        document.body.appendChild(ifrm);
-
-        setTimeout(() => { ifrm.classList.add('ebp-iframe--open'); }, 0);
+    if (!isIframeExists()) {
+        createIframe();
+        getDataAutocomplete();
         return;
     }
 
     const { detail }: Record<'detail', TabStorageSession> = (event as CustomEvent);
-
-    if (detail.isMenuOpen) {
-        ifrm.classList.add('ebp-iframe--open');
-        return;
-    }
-
-    ifrm.classList.remove('ebp-iframe--open');
+    toggleIframe(detail.isMenuOpen);
 })

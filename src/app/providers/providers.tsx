@@ -1,5 +1,6 @@
-import { FC, ReactElement } from 'react';
+import {FC, ReactElement } from 'react';
 import { ThemeProvider } from '@gravity-ui/uikit';
+import { Provider as StoreProvider } from 'jotai';
 
 interface IProviders {
     readonly children: ReactElement
@@ -7,8 +8,10 @@ interface IProviders {
 
 export const Providers: FC<IProviders> = ({ children }) => {
     return (
-        <ThemeProvider theme="light">
-            {children}
-        </ThemeProvider>
+        <StoreProvider>
+            <ThemeProvider theme="light">
+                {children}
+            </ThemeProvider>
+        </StoreProvider>
     );
 }

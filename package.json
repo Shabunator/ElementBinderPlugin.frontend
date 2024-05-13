@@ -11,25 +11,26 @@
     "chrome": "tsc && vite build --config packages/shell-chrome/vite.chrome.config.ts"
   },
   "dependencies": {
-    "@types/chrome": "^0.0.266",
-    "@types/node": "^20.12.7",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.22.3"
+    "@types/chrome": "^0.0.268",
+    "@types/node": "^20.12.11",
+    "jotai": "^2.8.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.23.1"
   },
   "devDependencies": {
     "@gravity-ui/icons": "^2.9.1",
-    "@gravity-ui/uikit": "^6.13.0",
-    "@types/react": "^18.2.79",
-    "@types/react-dom": "^18.2.25",
-    "@typescript-eslint/eslint-plugin": "^7.7.1",
-    "@typescript-eslint/parser": "^7.7.1",
+    "@gravity-ui/uikit": "^6.15.0",
+    "@types/react": "^18.3.2",
+    "@types/react-dom": "^18.3.0",
+    "@typescript-eslint/eslint-plugin": "^7.8.0",
+    "@typescript-eslint/parser": "^7.8.0",
     "@vitejs/plugin-react-swc": "^3.6.0",
-    "clsx": "^2.1.0",
+    "clsx": "^2.1.1",
     "eslint": "^8.57.0",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.6",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.7",
     "typescript": "^5.4.5",
-    "vite": "^5.2.10"
+    "vite": "^5.2.11"
   }
 }
