@@ -11,6 +11,10 @@
     padding: var(--g-spacing-2);
 }
 
+.layout__title {
+    cursor: move;
+}
+
 .layout__buttonRow {
     display: flex;
     gap: var(--g-spacing-2);

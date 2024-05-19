@@ -5,9 +5,12 @@ script.onload = () => {
 }
 ;(document.head || document.documentElement).appendChild(script);
 
-chrome.runtime.onMessage.addListener(({ name, params }) => {
+chrome.runtime.onMessage.addListener(async ({ name, params }) => {
     switch (name) {
         case 'click-extension-button':
+            window.dispatchEvent(new CustomEvent(name, { detail: params }));
+            break;
+        case 'click-context-menu':
             window.dispatchEvent(new CustomEvent(name, { detail: params }));
             break;
         default:
