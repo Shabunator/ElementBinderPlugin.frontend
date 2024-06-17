@@ -1,5 +1,5 @@
 import {
-    createHashRouter,
+    createBrowserRouter,
     createRoutesFromElements,
     Link,
     Route,
@@ -8,6 +8,7 @@ import {
 
 import { Layout } from '@app/layout';
 import { HomePage } from '@pages/homePage';
+import { LoginPage } from '@pages/loginPage';
 import { Fallback } from '@shared/ui/fallback';
 
 export const AppRouter = () => {
@@ -17,11 +18,18 @@ export const AppRouter = () => {
             element={<Layout/>}
             handle={{crumb: <Link to='/'>Главная</Link>}}
             errorElement={<Fallback/>}>
-            <Route index element={<HomePage/>}/>
+            <Route index element={<HomePage/>} />
+            <Route
+                path='login'
+                element={<LoginPage />}
+                handle={{
+                    crumb: <Link to='/login'>Login</Link>,
+                }}
+            />
         </Route>
     )
 
-    const router = createHashRouter(routers, {})
+    const router = createBrowserRouter(routers)
 
     return (<RouterProvider router={router}/>)
 }

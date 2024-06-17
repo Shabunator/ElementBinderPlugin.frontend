@@ -13,25 +13,27 @@
   },
   "dependencies": {
     "@types/chrome": "^0.0.268",
-    "@types/node": "^20.12.12",
-    "jotai": "^2.8.0",
+    "@types/node": "^20.14.2",
+    "jotai": "^2.8.3",
+    "lodash-es": "^4.17.21",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.23.1"
   },
   "devDependencies": {
-    "@gravity-ui/icons": "^2.9.1",
-    "@gravity-ui/uikit": "^6.15.0",
-    "@types/react": "^18.3.2",
+    "@gravity-ui/icons": "^2.10.0",
+    "@gravity-ui/uikit": "^6.18.0",
+    "@types/lodash-es": "^4.17.12",
+    "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "@typescript-eslint/eslint-plugin": "^7.9.0",
-    "@typescript-eslint/parser": "^7.9.0",
-    "@vitejs/plugin-react-swc": "^3.6.0",
+    "@typescript-eslint/eslint-plugin": "^7.13.0",
+    "@typescript-eslint/parser": "^7.13.0",
+    "@vitejs/plugin-react-swc": "^3.7.0",
     "clsx": "^2.1.1",
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
     "typescript": "^5.4.5",
-    "vite": "^5.2.11"
+    "vite": "^5.3.1"
   }
 }

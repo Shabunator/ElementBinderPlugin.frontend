@@ -1,14 +1,9 @@
 import { TabStorageSession } from './types/tab-storage-session';
-import { messageListener } from './helpers/message-listener';
-import { createIframe, toggleIframe, isIframeExists, getIframe } from './helpers/iframe-helper'
-// import { getDataAutocomplete } from './helpers/site-helper'
+import { createIframe, toggleIframe, isIframeExists, getIframe, changeHeightIframe } from './helpers/iframe-helper'
 
-window.addEventListener('message', messageListener);
-
-window.addEventListener('click-extension-button', (event) => {
+window.addEventListener('click-extension-button', async (event) => {
     if (!isIframeExists()) {
-        createIframe();
-        // getDataAutocomplete();
+        await createIframe();
         return;
     }
 
@@ -26,7 +21,13 @@ window.addEventListener('click-context-menu', async (event) => {
         return;
     }
 
-    toggleIframe(true);
+    window.postMessage({
+        source: "element-binder-plugin",
+        payload: {
+            type: 'click-extension-button',
+            detail: { isMenuOpen: true }
+        }
+    }, '*');
 
     const { detail }: Record<'detail', { info: Record<string, string> }> = (event as CustomEvent);
     iFrame.contentWindow.postMessage({
@@ -36,4 +37,9 @@ window.addEventListener('click-context-menu', async (event) => {
             detail: detail.info
         }
     }, '*');
+})
+
+window.addEventListener('change-height', async (event) => {
+    const { detail }: Record<'detail', { height: number }> = (event as CustomEvent);
+    changeHeightIframe(detail.height + 8)
 })
