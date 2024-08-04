@@ -1,0 +1,25 @@
+.layout {
+    display: grid;
+    gap: var(--g-spacing-2);
+}
+
+.layout__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--g-color-line-generic-solid);
+    padding: var(--g-spacing-2);
+}
+
+.layout__title {
+    cursor: move;
+}
+
+.layout__buttonRow {
+    display: flex;
+    gap: var(--g-spacing-2);
+}
+
+.layout__main {
+    padding: 0 var(--g-spacing-2);
+}

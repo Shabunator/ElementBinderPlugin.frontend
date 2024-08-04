@@ -23,8 +23,10 @@
     "baseUrl": "./src",
     "paths": {
       "@app/*": ["app/*"],
+      "@entities/*": ["entities/*"],
       "@pages/*": ["pages/*"],
-      "@shared/*": ["shared/*"]
+      "@shared/*": ["shared/*"],
+      "@widgets/*": ["widgets/*"]
     }
   },
   "include": ["src"],

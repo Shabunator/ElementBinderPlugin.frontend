@@ -1,0 +1,48 @@
+.container {
+    max-width: 560px;
+    margin: 16px auto 0;
+}
+
+.title {
+    display: block;
+    margin: 0 0 24px;
+}
+
+.methods {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    gap: 24px;
+}
+
+.form {
+    display: grid;
+    padding: 12px 0;
+    gap: 18px;
+}
+
+.verticalLine {
+    background-color: #eaeaea;
+    width: 1px;
+    height: 100%;
+}
+
+.socialNetworkContainer {
+    position: relative;
+    display: grid;
+    align-self: center;
+    gap: 8px;
+    grid-template-rows: auto 1fr;
+    opacity: .3;
+    cursor: not-allowed;
+}
+
+.socialNetwork {
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    gap: 8px;
+}
+
+.icon {
+    width: 32px;
+    height: 32px;
+}

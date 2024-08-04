@@ -9,6 +9,8 @@ import {
 import { Layout } from '@app/layout';
 import { HomePage } from '@pages/homePage';
 import { LoginPage } from '@pages/loginPage';
+import { SignUpPage } from '@pages/signUpPage';
+import { Projects } from '@pages/projects';
 import { Fallback } from '@shared/ui/fallback';
 
 export const AppRouter = () => {
@@ -19,13 +21,9 @@ export const AppRouter = () => {
             handle={{crumb: <Link to='/'>Главная</Link>}}
             errorElement={<Fallback/>}>
             <Route index element={<HomePage/>} />
-            <Route
-                path='login'
-                element={<LoginPage />}
-                handle={{
-                    crumb: <Link to='/login'>Login</Link>,
-                }}
-            />
+            <Route path='login' element={<LoginPage />}/>
+            <Route path='signup' element={<SignUpPage />}/>
+            <Route path='projects' element={<Projects />}/>
         </Route>
     )
 

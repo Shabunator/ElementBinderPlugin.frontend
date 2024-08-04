@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Element binder plugin",
   "description": "Base Level Extension",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "icons": {
     "16": "images/icon-16.png",
     "32": "images/icon-32.png",
@@ -12,43 +12,26 @@
   "background": {
     "service_worker": "background.js"
   },
+  "side_panel": {
+    "default_path": "packages/shell-chrome/index.html"
+  },
   "permissions": [
     "activeTab",
     "scripting",
     "storage",
-    "contextMenus"
+    "contextMenus",
+    "sidePanel"
   ],
   "host_permissions": [
     "<all_urls>"
   ],
-  "web_accessible_resources": [
-    {
-      "resources": [
-        "hook-exec.js"
-      ],
-      "matches": [
-        "<all_urls>"
-      ],
-      "extension_ids": []
-    }
-  ],
   "action": {
+    "default_title": "Нажмите, чтобы открыть панель",
     "default_icon": {
       "16": "images/icon-16.png",
       "32": "images/icon-32.png",
       "48": "images/icon-48.png",
       "128": "images/icon-128.png"
     }
-  },
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "css": ["ebp-iframe.css"],
-      "js": ["hook.js"],
-      "run_at": "document_start"
-    }
-  ],
-  "content_security_policy": {
-    "extension_pages": "script-src 'self'; object-src 'self'"
   }
 }
