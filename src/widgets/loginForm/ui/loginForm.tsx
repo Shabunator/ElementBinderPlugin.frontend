@@ -10,7 +10,7 @@ import { Button, TextInput, useToaster } from "@gravity-ui/uikit";
 import { login } from '@entities/user';
 
 import styles from './loginForm.module.css';
-
+ 
 const validationSchema = object().shape({
     email: string().email()
         .required("Укажите email!"),

@@ -1,0 +1,12 @@
+.modalContainer {
+    width: 700px;
+    padding: 32px;
+    display: grid;
+    gap: 16px;
+}
+
+
+.label {
+    display: grid;
+    gap: 4px;
+}

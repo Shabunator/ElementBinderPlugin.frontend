@@ -1,4 +1,5 @@
 import { request } from "@shared/utils/request";
+import { SIGN_IN, LOGOUT } from '@shared/utils/url';
 
 export type LoginRequest = {
     email: string;
@@ -11,7 +12,7 @@ export type LoginResponse = {
 }
 
 export const requestLogin = (loginRequest: LoginRequest) => {
-    return request<LoginResponse>('http://localhost:8082/api/v1/auth/signin', {
+    return request<LoginResponse>(SIGN_IN, {
         method: 'POST',
         body: JSON.stringify(loginRequest),
     })
@@ -24,7 +25,7 @@ export type LogoutResponse = {
 };
 
 export const requestLogout = () => {
-    return request<LogoutResponse>('http://localhost:8082/api/v1/auth/logout', { method: 'POST' })
+    return request<LogoutResponse>(LOGOUT, { method: 'POST' })
         .then()
         .catch();
 }

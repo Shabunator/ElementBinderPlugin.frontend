@@ -1,4 +1,5 @@
 import { request } from "@shared/utils/request";
+import { REFRESH_TOKEN } from '@shared/utils/url';
 
 export type RefreshTokenResponse = {
     accessToken: string;
@@ -6,7 +7,7 @@ export type RefreshTokenResponse = {
 };
 
 export const requestRefreshToken = (token: string) => {
-    return request<RefreshTokenResponse>('http://localhost:8082/api/v1/auth/refresh-token', {
+    return request<RefreshTokenResponse>(REFRESH_TOKEN, {
         method: 'POST',
         body: JSON.stringify({ refreshToken: token })
     })

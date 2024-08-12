@@ -17,18 +17,6 @@
     margin-inline-end: 6px;
 }
 
-.modalContainer {
-    width: 700px;
-    padding: 32px;
-    display: grid;
-    gap: 16px;
-}
-
-.label {
-    display: grid;
-    gap: 4px;
-}
-
 .createProject {
     grid-column-start: 1;
     grid-column-end: -1;

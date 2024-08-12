@@ -1,4 +1,5 @@
 import { request } from "@shared/utils/request";
+import { PROJECT } from '@shared/utils/url';
 
 export type CreateProjectRequest = {
     name: string;
@@ -12,10 +13,16 @@ export type CreateProjectResponse = {
 };
 
 export const requestCreateProject = (createProjectRequest: CreateProjectRequest) => {
-    return request<CreateProjectResponse>('http://localhost:8082/api/v1/project', {
+    return request<CreateProjectResponse>(PROJECT, {
         method: 'POST',
         body: JSON.stringify(createProjectRequest),
     })
+        .then()
+        .catch();
+}
+
+export const requestGetAllProjects = () => {
+    return request<CreateProjectResponse>(PROJECT)
         .then()
         .catch();
 }

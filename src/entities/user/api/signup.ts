@@ -1,4 +1,5 @@
 import { request } from "@shared/utils/request";
+import { REGISTER } from '@shared/utils/url';
 
 export type SignupRequest = {
     name: string;
@@ -11,7 +12,7 @@ export type SignupResponse = {
 }
 
 export const requestSignup = (signupRequest: SignupRequest) => {
-    return request<SignupRequest>('http://localhost:8082/api/v1/auth/register', {
+    return request<SignupRequest>(REGISTER, {
         method: 'POST',
         body: JSON.stringify(signupRequest),
     })

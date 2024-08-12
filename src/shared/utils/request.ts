@@ -10,7 +10,7 @@ type requestReturn<T> = {
     data: T;
 } | {
     state: 'hasError';
-    error: any;
+    error: Record<string, string>;
 };
 
 export const modifiedFetch = (input: inputType, init?: RequestInit): Promise<Response> => {
